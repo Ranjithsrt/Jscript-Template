@@ -136,7 +136,7 @@ Non-Primitive Data Types"
 1.Object
 
 
-Represents a collection of properties, each consisting of a key (usually a string) 
+//Represents a collection of properties, each consisting of a key (usually a string) 
 and a value (which can be any data type, including another object).
 
 let person={
