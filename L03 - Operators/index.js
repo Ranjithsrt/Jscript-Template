@@ -1,81 +1,308 @@
-//Operators
-/*
+Operators:
+
+--------------------------------------------------------------------------------------------
+
+Types:
+
 1.Arithmetic Operators
 2.Assignment Operators
 3.Comparison Operators
 4.Logical Operators
 5.String Operators
-*/
 
-//1.Arithmetic Operators - Arithmetic operators are used to perform basic mathematical operations
-//1.1)Addition (+)
+--------------------------------------------------------------------------------------------------
 
-//1.2)Subtraction (-)
+1.Arithmetic Operators - Arithmetic operators are used to perform basic mathematical operations
 
-//1.3)Multiplication (*)
+1.1)Addition (+)
 
-//1.4)Division (/)
+console.log( "Arithmetic operators");
 
-//1.5)Modulus (%)
+let sum = 5 + 3;
 
-//1.6)Exponentiation (**)
+console.log( "Addittion" , sum);
 
-//1.7)Increment (++)
+----------------------------------------------------------------------------------------------
 
-//1.8)Decrement (--)
+  
+1.2)Subtraction (-)
+ 
+let sum = 5 - 3;
 
-//2.Assignment Operators - Assignment operators are used to assign values to variables.
-//2.1)Assignment (=)
+console.log( "subtraction" , sum);
 
-//2.2)Addition Assignment (+=)
+---------------------------------------------------------------------------------------------
 
-//2.3)Subtraction Assignment (-=):
+1.3)Multiplication (*)
 
-//2.4)Multiplication Assignment (*=):
+let sum = 2 * 3;
 
-//2.5)Division Assignment (/=):
+console.log( "mul" , sum);
 
-//2.6)Modulus Assignment (%=):
+-----------------------------------------------------------------------------------------------
 
-//2.7)Exponentiation Assignment (**=)
+1.4)Division (/)
 
-//3.Comparison Operators - Comparison operators are used to compare two values.
+ let sum = 12 / 2;
 
-//3.1)Equal (==)
+console.log( "div" , sum);   
 
-//3.2)Strict Equal (===)
+----------------------------------------------------------------------------------------------
 
-//3.4)Not Equal (!=)
+1.5)Modulus (%)
 
-//3.5)Strict Not Equal (!==)
+let sum = 10 % 3;  //reminder
 
-//3.6)Greater Than (>)
+console.log( "m0du" , sum);
 
-//3.7)Less Than (<)
+-----------------------------------------------------------------------------------------------
 
-//3.8)Greater Than or Equal (>=)
+1.6)Exponentiation (**)
 
-//3.9)Less Than or Equal (<=)
+let sum = 2 ** 3; //pow 2x2x2=8
 
-//4.Logical Operators - Logical operators are used to combine multiple conditions.
+console.log( "mul" , sum);
 
-//4.1)Logical AND (&&)
+===============================================================================================
 
-//4.2)Logical OR (||)
+1.7)Increment (++)
 
-//4.3)Logical NOT (!)
+let sum = 10;
+10++;  // post increment 10+1=11
+++a; // pre increment 11
+console.log(sum);
+
+var a=10; //10
+var b=a++; //10
+console.log( b); //10
+console.log(a); // a meendum a vaa paakum pothu 11 maarum
+
+
+var a=10; //10
+var b=++a; //11 meendum ore a paakaa thevai illai
+console.log( b); //11
+console.log(a); // 11
+
+--------------------------------------------------------------------------------------------------
+
+1.8)Decrement (--)
+
+let sum = 10;
+10--;  //10-1=9
+--10; //9
+console.log(sum);
+
+
+var a=10; //10
+var b=a--; //9
+console.log( b); //10
+console.log( a); // a meendum a vaa paakum pothu 9 maarum
+
+var a=10; //10
+var b=--a; //9 meendum ore a paakaa thevai illai
+console.log( b); //9
+console.log(a); // 9
+
+----------------------------------------------------------------------------------------------------
+
+2.Assignment Operators - Assignment operators are used to assign values to variables.
+
+  
+2.1)Assignment (=)
+
+let num =10;
+
+console.log( num);
+
+---------------------------------------------------------------------------------------------------
+
+2.2)Addition Assignment (+=)
+
+let num =10;
+num+=5;
+
+console.log( num);  //15
+
+---------------------------------------------------------------------------------------------------
+
+2.3)Subtraction Assignmen t (-=):
+
+
+let num =10;
+num-=5;
+
+console.log( num);  //10
+
+----------------------------------------------------------------------------------------------------------
+
+2.4)Multiplication Assignment (*=):
+
+
+let num =10;
+num*=5'
+
+console.log( num);  //50
+
+--------------------------------------------------------------------------------------------------------
+
+2.5)Division Assignment (/=):
+
+let num =10;
+num/=2;
+
+console.log( num);  //5
+
+------------------------------------------------------------------------------------------------------------------
+
+2.6)Modulus Assignment (%=):
+
+let num =10;
+num%=3
+
+console.log( num);  //1
+
+----------------------------------------------------------------------------------------------------------
+
+2.7)Exponentiation Assignment (**=)
+
+let num =2;
+num**=3;
+
+console.log( num);  //8
+
+----------------------------------------------------------------------------------------------
+
+3.Comparison Operators - Comparison operators are used to compare two values.
+
+3.1)Equal (==) 
+
+console.log( 5==5);  //true
+
+Type coercion:
+
+console.log( 5==:"5");  //1st enna type paakum apram aathuve convert pnnikkum  //true
+
+3.2)Strict Equal (===)
+
+Noo type coercion
+
+console.log( 5==='5');  // irendu ore value  vaa ore type ah check pannum?.. // false
+
+3.4)Not Equal (!=)
+
+console.log( 5!='5');  // irendum same aga orukka koodaathu.. trur
+
+console.log( 4!=5);  //false
+
+3.5)Strict Not Equal (!==)
+
+console.log( 5!==5);  // no type coercion true
+
+console.log( 5!=='5');   //false
+
+3.6)Greater Than (>)
+
+console.log( 10>5);  // true
+
+3.7)Less Than (<)
+
+console.log( 10<5);  //false
+
+3.8)Greater Than or Equal (>=)
+
+console.log( 11>=10); //true
+
+console.log( 10>=10); //true
+
+console.log( 7>=10);  //false
+
+
+3.9)Less Than or Equal (<=)
+
+ console.log( 5<=10);  //true
+
+console.log( 10<=10);  //true
+
+console.log(11<=10);  //false
+
+-----------------------------------------------------------------------------------------------------
+
+4.Logical Operators - Logical operators are used to combine multiple conditions.
+
+4.1)Logical AND (&&)
+
+console.log( true && false);  //f
+console.log( false && true);  //f
+console.log( true && true);  //t
+console.log( false && false);  //f
+
+
+4.2)Logical OR (||)
+
+console.log( true || false);  //t
+console.log( false || true);  //t
+console.log( true || true);  //t
+console.log( false || false);  //f
+ 
+  
+
+4.3)Logical NOT (!)
+
+console.log( !true);  //f
+console.log(!false );  //t
+ 
 
 //Example
 
-// String Operators
+let haveidproof=false;
+let isAdult=true;
 
-//String concatenation
+if(haveidproof &&  isAdult){
 
-//String with Different Quotes:
+    console.log( "allowed" );   
+}
+else{
 
-//Concatenation with Object Properties:
+ console.log( "not  allowed"); 
+  
+}
 
-//Template literal
+
+-------------------------------------------------------------------------------------------------
+
+ String Operators
+
+String concatenation:
+
+console.log( "HI");
+
+console.log( "HI" +' '+" HELLO");  
+
+String with Different Quotes:
+
+console.log( " I AM 'HERO'");  
+
+console.log( ' I AM "HERO"');  
+
+let MSG="I" + "RANJITH";
+console.log( MSG);  
+
+console.log( " I \'M 'HERO' "); 
+
+Concatenation with Object Properties:
+
+let person={
+
+id:1,
+name:"ranjith",
+  
+}
+
+console.log( " wlcome"+ name+ "yourid " + id);  
+
+Template literal
+
+console.log( " wlcome ${ name} yourid ${id});  
 
 //Order Prcedence
 
