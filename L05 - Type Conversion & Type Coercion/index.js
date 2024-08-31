@@ -41,8 +41,8 @@ Boolean to String:
 
 
 
-let bool - true;
-let strbool =String(bool);
+let bool = true;
+let strbool = String(bool);
               "true" true
 
 
@@ -56,13 +56,13 @@ String to Boolean:
 
 
 let strtrue="true"; 
-let strfalse-"false"; //true
+let strfalse="false"; //true
 
-//let strfalse-" ";  //false  //truthy fasleshy
+//let strfalse=" ";  //false  //truthy fasleshy
 
 
-let booltrue-Boolean(strtrue);
-let boolfalse-Boolean(strfalse);
+let booltrue = Boolean(strtrue);
+let boolfalse = Boolean(strfalse);
 
 
 console.log(booltrue); //true
