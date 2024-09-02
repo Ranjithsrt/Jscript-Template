@@ -11,9 +11,14 @@ Types of Loops
 
 syntax:
 
+for (initialization; condition; increment)  
+{  
+    code to be executed  
+}  
 
 
-Example
+Example:
+
   //intiallize condition increment
 for ( let i=0; i<5; i++ ){    
           //  1  // i<=5;
@@ -35,7 +40,8 @@ for ( let i=0; i<5; i++ ){
   
 using let - block scoped, not accesssible outside the loop
 
-for ( let i=0; i<5; i++ ){     
+for ( let i=0; i<5; i++ ){ 
+  
   console.log('iteration'${i}')           recommended in program
   
 }
@@ -56,7 +62,7 @@ console.log('iteration'${j}')  accesssible outside the loop
 
 --------------------------------------------------------------------------------------------------------------------
 
-Looping Backwards
+Looping Backwards:
 
                 condition t mattum ..nxt increment block prun aagum.. apram + or - pannum
 for ( let i=5; i<0; i-- ){   
@@ -70,7 +76,7 @@ console.log(' reverseiteration'${i}')
 
  
 -----------------------------------------------------------------------------------------------------------------
-
+  
 Nested Loop
 
 for ( let x=1; x<=2; x++ ){     
@@ -89,9 +95,16 @@ console.log('iteration'${i}')  not accesssible outside the loop
 
 2. While Loop
 
-
   
-          //9 8 7
+Syntax:
+
+while (condition)  
+{  
+    code to be executed  
+}  
+  
+  
+         //9 8 7
 let balance=10;
     console.log(' balance  amount brfore while loop'${balance}')
       
@@ -121,7 +134,9 @@ while (balance<50){
   
 3. Do While Loop
 
-
+do{  
+    code to be executed  
+}while (condition);  
     
 
         //10
@@ -132,6 +147,8 @@ let num = 0; //condition
     num++;
   } while(num <=5); t
            //10<=5  false
+
+  
 output
   0
   1
@@ -141,13 +158,13 @@ output
   5
 ------
 
-  number 10
+  number 10 // oru vatti run agum. 
 
 ------------------------------------------------------------------------------------------------------------------------
 
- break  (stop)
+break  (stop)
 
-  for ( let i=0; i<5; i++ ){
+for ( let i=0; i<5; i++ ){
 
   if (i ===3 ){
        break;  // terminates the loop when i equals 3 
@@ -163,12 +180,12 @@ console.log("iteration{i}");
   
   ----------------------------------------------------------------------------------------------------------------------------------
 
-  continue  (skip)
+continue  (skip)
 
     
 debugger;  // use panni paru
   
-  for ( let i=0; i<5; i++ ){
+for ( let i=0; i<5; i++ ){
 
   if (i ===3 ){    //3 skip pannittu appram continue  pannum
        continue;  // terminates the loop when i equals 3 
@@ -176,11 +193,33 @@ debugger;  // use panni paru
 console.log("iteration{i}");
 }
 
-  ooutput
+  output
 
   iteration 0
   iteration 1
   //3 skip pannittu appram continue  pannum
   iteration 4
   iteration 5
+
   
+_____________________________________________________________________
+
+Function in loops:
+
+function greet (number) {
+
+console.log('Hello world $(number)");
+
+}
+
+for (let i = 0; i <10; i++) (
+
+greet(i);
+
+output :
+
+Hello world 0
+
+Hello world 9
+
+__________________________________________________________________
