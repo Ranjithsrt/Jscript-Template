@@ -1,4 +1,4 @@
-
+  //Obj name
 let person = {
 
   key     value
@@ -36,6 +36,8 @@ let car ={
   brand:"toyota";
   model:"camry;
   year=2026;
+
+ //functionname
   displayinfo:function(){
                //(this) obj kuulla irukka year eaduthukko
     return '${this.year} ${this.brand} ${this.model};
@@ -44,7 +46,7 @@ let car ={
 };
 
 //console.log(car);
-console.log(car.displayinf());
+console.log(car.displayinfo());
 
 output:
 
@@ -66,80 +68,113 @@ let person = {
   
 };
 
-shorthand: (desturucturing)
+shorthand: (Destructuring )
 
-let {name ,age,isemployed} = person;   //mela irukka obj key value inga set agum
+let {name ,age,isemployed} = person;   //mela irukka obj key value intha variablesku set agum
 
 console.log(name);
 console.log(age);
 
+Output :
+
+Ranjith 
+21
+--------—-----------------------------------------------------
 
 Nested Complex Objects
 
-let resturent ={
+     //obj name
+let restaurant = {  //obj 1
+  
 
-  name:"idli",
-  loc : "chennai";
+name: "Idli Delights",
 
+location: "Chennai" ,
 
-  owner :{
-             name : "Ranjith",
-              age : 21,
+owner: {              // Obj 2
 
+name: 'Rajini Kumar',
 
-                contact:{
-                   email: viratzzz@12.
-                   ph:"27839699",
-  };
-             };
+age: 50,
 
-      menu:[
+contact: {        //  obj 3
 
-
-          { dish: "masala dosa",price:30,spicy:true},
-          { dish: "coffee",price:100,spicy:false},
-          { dish: "pongal",price:45:,spicy:false},
-
-
-           ];
+   email: 'rajinikumar@sapadusapadu@gmail.com',
+   phone: '555-123-4567',
+  
+ };
   
 };
+
+menu: [   //Array
+
+{dish: "Masala Dosa, price: 50, spicy: true } ,
+
+{dish: 'Filter Coffee', price: 30, spicy: false },       //obj 4
+ 
+{dish: 'Pongal', price: 45, spicy: false} ,
+
+
+], 
+} ;
+
 
 console.log(restaurant);
 
 -----------------------------------------------------------------------------------------------------------------
 
-
 Accessing properties of the nested objects
 
-console.log("welcome to ${restaurant.name} in ${restaurant.loc}");
-console.log("welcome to ${restaurant.owner.name} in ${restaurant.owner.loc}");
-console.log("welcome to ${restaurant.owner.contact.email in ${restaurant.contact.ph}");
 
-restaurant.menu,forEach((item) =>{
-  
-  console.log(" ${iteam.dish}: rs. ${item.price}") (${item.spicy? "spicy":"not"});  // not spicy
+console.log('Welcome to ${restaurant.name} in ${restaurant.location}`);
 
+console.log(Owned by ${restaurant.owner.name}, age ${restaurant.owner.age}');
+
+console.log(
+
+Contact: ${restaurant.owner.contact.email), ${restaurant.owner.contact.phone}
+
+);
+           
+                 //Array
+restaurant.menu.forEach((item) => {
+
+console.log(  
+                                            // tarinary operator 
+`${item.dish): Rs.${item.price) (${item.spicy? 'Spicy': 'Not Spicy'))
+
+);
 
 });
 
----------------------------------------------------------------------------------------------------------------------------------
 
+---------------—-------------------------------------------------------------------                             
+                                   
 Destructure owner object
 
-let { name:ownername,age:ownerage,contact:{ email: owneremail,phone: ownerphone} ,} =restaurant.owner;
+let {
 
- Output details about the restaurant
+name: ownerName,
 
-console.log("owned by  ${ownername} ,age ${ownerage}");
-console.log(" contact ${ownereamul} in ${ownerphone}");
+age: ownerAge,
 
+contact: { email: ownerEmail, phone: ownerPhone }, } = restaurant.owner;
 
- Output the menu items using destructuring within forEach
+---------------------------------------------------------------------------------------
 
-restaurant.menu,forEach(( dish,price,spicy) =>{
-  
-  console.log(" ${dish}: rs. ${price}") (${spicy? "spicy":"not"});  // not spicy
-});
+Output details about the restaurant
+      
+console.log(Owned by ${ownerName), age ${ownerAge}`); 
 
------------------------------------------------------------------------------------------------------------------------------
+console.log('Contact: ${ownerEmail), $(ownerPhone)`);
+
+-----------------------------------------------------------------------------------
+
+Output the menu items using destructuring within forEach
+
+restaurant.menu.forEach(({ dish, price, spicy }) => {
+
+console.log(${dish): Rs.${price) (${spicy? 'Spicy': 'Not Spicy'})`); }); 
+
+--------------------------------------------------------------------—---------------------
+
