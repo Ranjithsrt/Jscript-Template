@@ -157,3 +157,130 @@ modified item 3
 modified item 4
 
 --------------------------------------------------------------------------------------------------------------------
+
+getElementsByTagName
+
+const contents = document.getElementById('content').getElementsByTagName('p') console.log(contents);
+
+function contentItemsStyle() {  // particular element select Panni styles apply pannum. 
+
+contents.item(0).style.color = 'red';
+
+contents.item(1).style.fontSize = '14px';
+
+contents.item(2).style.fontWeight = '700';
+
+contents.item(3).style.backgroundColor = 'pink';
+
+contents.item(3).style.color = 'white';
+
+}
+
+contentItemsStyle(); //function 
+
+---------------------------------------------------------------------------
+
+function contentStyle() {  // multiple elementsku styles apply pannum  
+
+for (let i = 0; i < contents.length; i++) {    //for loop
+
+contents.item(i).style.paddingBottom = '6px';
+
+}
+
+}
+
+contentStyle();
+
+-----------------------------------------------------------------------------
+
+Remove element from Dom:
+
+const message document.getElementById('message');
+
+// message.remove();
+setTimeout(() => { message.remove(); ), 3000);  //3s apram dlt agum
+
+-------------------------------------------------------------------------------------
+
+Adding element to DOM:
+
+const newParagraph = document.createElement('p');
+
+newParagraph.textContent = 'This is a new paragraph added dynamically.';
+
+newParagraph.style.color = 'green';
+
+newParagraph.classList.add('new-paragraph');
+
+const container = document.getElementById('main');
+
+---------------------------------------------------------------------------------------------------
+    
+appendChild(): Adds a new element as the last child of the parent element.
+
+insertBefore(): Inserts a new element before an existing child element.
+
+insertAdjacentHTML(): Inserts HTML content at a specified position relative to an e
+
+
+
+container.appendChild(newParagraph);
+
+container.insertBefore(newParagraph, heading);
+
+container.insertAdjacentHTML('afterbegin', '<p>See Me After Main Begin</p>');
+
+container.insertAdjacentHTML ('afterend', '<p>See Me After Main End</p>');
+
+Ontainer.insertAdjacentHTML('beforebegin', '<p>See Me Before Main Begin</p>');
+
+container.insertAdjacentHTML ('beforeend', '<p>See Me Before Main End</p>');
+
+container.insertAdjacentHTML(
+
+'beforeend",
+
+<p style="padding-top: 20px;">See Me Before Main End</p>'
+
+);
+
+-------------------------------------------------------------------------------------------------------------
+    
+query Selector //ID irundhalum class ahh irundhalum select pannum
+
+Selecting elements using querySelector (work both class on id more flexibility
+
+      Var name                           //I'd symbol
+const subTitle = document.querySelector('#subtitle');
+                                        // class . Symbol
+console.log(subTitle); // tags text print aagum
+
+console.log(subTitle.textContent);  // text only
+
+setTimeout(() {
+
+subTitle.textContent = "New Subtitle from JS';
+
+}, 4000); // 4s wait pannum apram style apply pannum. 
+
+-------------------------------------------------------------------------
+
+querySelectorAll
+
+Selecting multiple elements using querySelectorAll
+
+const listItemsQuery = document.querySelectorAll('.list-item');
+
+console.log(listItems Query);
+
+
+Loop :  // node irukuradha array vaa convert panna avasiyam illai...apdiyea wrk pannalaam inga. 
+
+listItemsQuery.forEach((item, index) => {
+
+item.textContent = Modified Item ${index + 2);
+
+});
+
+--------------------------------------------------------------------------------------------------
