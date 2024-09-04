@@ -29,22 +29,21 @@ console.log(person);
 
 -------------------------------------------------------------------------------------------------------]]
 
-Object with method
+  let car ={
 
-let car ={
-
-  brand:"toyota";
-  model:"camry;
-  year=2026;
+  brand:"toyota",
+  model:"camry",
+  year: 2026,
 
  //functionname
   displayinfo:function(){
                //(this) obj kuulla irukka year eaduthukko
-    return '${this.year} ${this.brand} ${this.model};
+    return `${this.year} ${this.brand} ${this.model}`;
   }
 
 };
 
+ 
 //console.log(car);
 console.log(car.displayinfo());
 
@@ -70,15 +69,18 @@ let person = {
 
 shorthand: (Destructuring )
 
-let {name ,age,isemployed} = person;   //mela irukka obj key value intha variablesku set agum
+let {name ,age,isEmployed} = person;   //mela irukka obj key value intha variablesku set agum
 
 console.log(name);
 console.log(age);
+console.log(isEmployed);
 
 Output :
 
 Ranjith 
 21
+true
+
 --------—-----------------------------------------------------
 
 Nested Complex Objects
