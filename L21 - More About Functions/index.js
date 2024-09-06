@@ -22,3 +22,41 @@ drive( ' Alex ' , startEngine);
 output:
 
 Engine is started! by Alex
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Pure Functions: Functions that, given the same input, 
+
+will always return the same output and have no side effects.
+
+  
+// Pure function
+functionadd(a, b) {
+  
+return a + b;
+  
+console.log(add(2,3)); //5
+console.log(add(2,3));  //5
+console.log(add(2,3)); //5
+
+
+  ---------------------------------------------------------------------
+
+    
+// Impure function
+    
+let counter =0;
+  
+function increment(value) {
+  
+   counter += value;
+   return counter;
+
+}
+  
+
+console.log(increment(2));
+console.log(increment(2));
+console.log(increment(2));
+
+------------------------------------------------------------------------------------------
