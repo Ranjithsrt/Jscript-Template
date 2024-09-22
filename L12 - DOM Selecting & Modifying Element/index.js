@@ -56,18 +56,18 @@ function:
 
 
           // f name
-function  chageHeading() {
+function  changeHeading() {
 
 setTimeout(( ) =>{
 
-heading.innerHtml = 'see, i am from planet sun'; //override aagi 2s appram maarum
+heading.textContent = 'see, i am from planet sun'; //override aagi 2s appram maarum
  // 2s delay 
-} . 2000 );
+}, 2000 );
 
 
 }
 
- chageHeading()
+changeHeading()
 
 see, i am from planet sun'
 
@@ -76,9 +76,9 @@ see, i am from planet sun'
  getElementsByClassName  // multiple elemrnt select panna.. 
 
     //var name                          //particular class name
-const listitems= document.getElementByClassName ('list-item')  //election
+const listitems= document.getElementsByClassName ('list-item')  //selection
 
-console.log(list-items);
+console.log(listitems);
 
 output:
    
@@ -91,23 +91,37 @@ output:
   
 access particular elemrnt:
 
+                     // 1st listname
 console.log(listitems.item(0));
+                           //index no
 <li class= "list-item"> Hello 1</li>   
   
 console.log(listitems.item(1));
 <li class= "list-item"> Hiiii 2 </li> 
 
-console.log(listitems.item(1).innerHtml);  //text mattum print aagum (value)
-console.log(listitems.item(2).innerHtml);  
+console.log(listitems.item(2).innerHtml);  //text mattum print aagum (value)
+console.log(listitems.item(3).innerHtml);  
 
 output
 
-Hello 1 // value
-Hiii 2
+Hello 3 // value
+Hiii 4
 
 loop:
 
-for ( let i = 0 ; i < listItems.length ; i++){
+for (let i = 0; i < 4; i++) {
+
+  console.log(listitems.item(i));
+
+}
+
+output
+    
+<li class="list-item">Item 1</li>
+
+
+                     // i < 4
+for ( let i = 0 ; i < listitems.length ; i++){
   
 console.log(listitems.item(i).innerHTML);  
   
@@ -122,8 +136,8 @@ Hiii 2
 
 ----------------------------------------------------------------------------------------------------------
   
-for ( let i = 0 ; i < listItems.length ; i++){
-  
+for ( let i = 0 ; i < listitems.length ; i++){
+                                             //0+1=1    
 listitems.item(i).innerHTML = 'modified item ${i+1}';  
   
 }
@@ -146,8 +160,8 @@ itemsArray.forEach((item) =>{
 
 console.log(item.textContent);  
   
-));
-
+ 
+});
 
 output
 
@@ -160,7 +174,16 @@ modified item 4
 
 getElementsByTagName
 
-const contents = document.getElementById('content').getElementsByTagName('p') console.log(contents);
+const contents = document.getElementById('content').getElementsByTagName('p');
+console.log(contents);
+
+//contents.item(0).style.color = 'red';
+
+//contents.item(1).style.backgroundColor = "black";
+//contents.item(1).style.color = "yellow";
+//contents.item(1).style.padding = "20px";
+
+//contents.item(2).style.fontWeight = "800";
 
 function contentItemsStyle() {  // particular element select Panni styles apply pannum. 
 
@@ -184,7 +207,7 @@ function contentStyle() {  // multiple elementsku styles apply pannum
 
 for (let i = 0; i < contents.length; i++) {    //for loop
 
-contents.item(i).style.paddingBottom = '6px';
+contents.item(i).style.paddingBottom = '16px';
 
 }
 
@@ -196,23 +219,27 @@ contentStyle();
 
 Remove element from Dom:
 
-const message document.getElementById('message');
+const message = document.getElementById('message');
 
 // message.remove();
-setTimeout(() => { message.remove(); ), 3000);  //3s apram dlt agum
+setTimeout(() => { message.remove(); }, 3000);  //3s apram dlt agum
 
 -------------------------------------------------------------------------------------
 
 Adding element to DOM:
-
+                               //method             //create tag name
 const newParagraph = document.createElement('p');
 
+// antha tagla text add panna
 newParagraph.textContent = 'This is a new paragraph added dynamically.';
 
 newParagraph.style.color = 'green';
 
-newParagraph.classList.add('new-paragraph');
+css style:
 
+              // method      css style name
+newParagraph.classList.add('new-paragraph');
+                                            //id
 const container = document.getElementById('main');
 
 ---------------------------------------------------------------------------------------------------
@@ -225,25 +252,33 @@ insertAdjacentHTML(): Inserts HTML content at a specified position relative to a
 
 
 
-container.appendChild(newParagraph);
+container.appendChild(newParagraph); //last ah add pannum
+ 
+                       //Newelement name             
+container.insertBefore(newParagraph, heading); // heading ithukku moonadi style apply panum.
+                                      // before id name
 
-container.insertBefore(newParagraph, heading);
-
+//main
 container.insertAdjacentHTML('afterbegin', '<p>See Me After Main Begin</p>');
 
 container.insertAdjacentHTML ('afterend', '<p>See Me After Main End</p>');
 
-Ontainer.insertAdjacentHTML('beforebegin', '<p>See Me Before Main Begin</p>');
+container.insertAdjacentHTML('beforebegin', '<p>See Me Before Main Begin</p>');
 
 container.insertAdjacentHTML ('beforeend', '<p>See Me Before Main End</p>');
 
+
+
 container.insertAdjacentHTML(
 
-'beforeend",
+'beforeend",      //css style
 
 <p style="padding-top: 20px;">See Me Before Main End</p>'
 
 );
+
+container.insertAdjacentHTML ('beforend', `<p style = padding-top: 100px ;">See Me Before Main Begin</p>`);
+
 
 -------------------------------------------------------------------------------------------------------------
     
@@ -258,7 +293,9 @@ console.log(subTitle); // tags text print aagum
 
 console.log(subTitle.textContent);  // text only
 
-setTimeout(() {
+
+
+setTimeout(() => {
 
 subTitle.textContent = "New Subtitle from JS';
 
@@ -279,8 +316,7 @@ Loop :  // node irukuradha array vaa convert panna avasiyam illai...apdiyea wrk 
 
 listItemsQuery.forEach((item, index) => {
 
-item.textContent = Modified Item ${index + 2);
+item.textContent = `Modified Item ${index + 2}`;
 
-});
-
+ });
 --------------------------------------------------------------------------------------------------
