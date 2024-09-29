@@ -79,3 +79,80 @@ Withdraw 200. New Balance 1200
 Insufficient funds Invalid amount.
 
 Invalid deposit amount
+
+
+
+------------------
+
+Rewrite:
+
+
+class BankAccount {
+
+        
+  #balance;  
+
+  constructor (initialBalance) {
+        
+    this.#balance = initialBalance;
+
+}
+
+  
+deposit(amount) {
+
+    if (amount > 0) {
+
+       this.#balance += amount;
+
+     console.log(`Deposited ${amount}. New Balance ${this.#balance}`) ;
+
+    } else {
+
+      console.log("Invalid deposit amount");
+
+} 
+
+}
+
+withdraw (amount) {
+
+    if (amount > 0 && amount <= this.#balance) {
+
+        this.#balance -= amount;
+
+        console.log(`Withdraw ${amount} New Balance ${this.#balance}`);
+
+    } else {
+
+        console.log(" Insufficient funds or invalid amount. ");
+
+}
+
+}
+ 
+getBalance() {
+
+      return this.#balance;
+
+}
+
+}
+
+let savningAccount = new BankAccount(1000);
+
+savningAccount.deposit (500);
+
+savningAccount.withdraw(200);
+
+savningAccount.withdraw(30000);
+
+savningAccount.deposit (-1000);
+
+ 
+
+console.log(savningAccount.getBalance()); 
+
+
+
+----------------------
